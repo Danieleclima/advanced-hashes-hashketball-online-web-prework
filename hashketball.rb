@@ -116,7 +116,7 @@ def game_hash
 end
 
 
-def shoe_zize (name)
+def shoe_zize(name)
   hash = game_hash
   hash.each do |location, info| 
     info.each do |attribute, stuff| 
