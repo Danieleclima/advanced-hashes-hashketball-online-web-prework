@@ -118,9 +118,14 @@ end
 
 def shoe_zize (name)
   hash = game_hash
-  hash.each do |location, attributes|
-    attributes.each do |attribute, info|
-      if attribute == :team_name
+  hash.each do |location, info| 
+    info.each do |attribute, stuff| 
+      if stuff.include?(name) 
+       return hash[location][attribute][name][:shoe]
+      end
+    end
+  end
+end
   
 def num_points_scored(name)
   hash = game_hash
